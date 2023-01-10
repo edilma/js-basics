@@ -20,3 +20,4 @@ const message2 = (age>=21)
                     : "Please leave now";
 
 console.log(message2);
+console.log ("hola"); 

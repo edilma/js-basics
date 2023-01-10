@@ -64,3 +64,5 @@ switch (youPet){
     default:
         console.log("Wow, I never even heard of that!");
 }
+
+// for more in ternaries, look at ternary.js
