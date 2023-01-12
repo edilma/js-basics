@@ -30,3 +30,4 @@ const searchTerm = "love";
 const result= newWord.indexOf(searchTerm);
 
 console.log(result);
+
