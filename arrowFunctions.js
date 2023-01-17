@@ -1,11 +1,11 @@
 function addTwoNums (a,b){
     return a+b;
 }
-/*
-function add2Num = (a,b)=>{
+
+function add2Num (a,b){
     return a+b;
 }
-*/
+
 
 const squarNum = a =>{
     return a**2;

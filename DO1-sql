@@ -1,0 +1,59 @@
+CREATE TABLE users (
+    ID INT Primary Key auto_increment not null,
+    Store_ID CHAR(10),
+    first_name VARCHAR(50) ,
+    lastName VARCHAR(50),
+    gender VARCHAR(20),
+    email VARCHAR(50),
+    birthday_day CHAR(10),
+    phone_number VARCHAR(20)
+
+);
+
+INSERT INTO users (ID, Store_ID,first_name,lastName,gender,email,birthday_day,phone_number)
+VALUES("1","bcc91","Edilma","Riano","F","edilmaria@hotmail.com","04/03/1971","954-682-6960") ;
+
+
+INSERT INTO users (ID, Store_ID,first_name,lastName,gender,email,birthday_day,phone_number)
+VALUES("2","bcc91","Barnes","Peters","M","barnesp@hotmail.com","10/10/1990","954-555-6960") ;
+
+
+INSERT INTO users (ID, Store_ID,first_name,lastName,gender,email,birthday_day,phone_number)
+VALUES(null,"bcc91","Daniel","Smith","M","danielsmith@gmail.com","09/17/2000","561-555-6960") ;
+
+INSERT INTO users(ID, Store_ID,first_name,lastName, gender, email, birthday_day,phone_number)
+VALUES(null,"bcc91","Miguel", "Mattos", "M", "miguel23@gmail.com", "02/12/1990", "903-098-7898");
+
+INSERT INTO users(ID,Store_ID,first_name,lastName,gender,email,birthday_day,phone_number)
+VALUES (null,"bcc91","Andy","Nagamoto", "M", "andy879@aol.com","01/01/2000","789-098-0908")
+
+SELECT COUNT * from users;
+SELECT COUNT(email) FROM users;
+SELECT DISTINCT email FROM users;
+select DISTINCT COUNT (email)FROM users
+
+SELECT first_name, lastName, email FROM users;
+
+SELECT * FROM users WHERE (gender="M");
+
+SELECT * FROM users WHERE id>=3;
+
+UPDATE users SET first_name="Jonathan" WHERE Store_ID = "bcc91";// if my case the store_ID are the same 
+
+UPDATE user SET first_name ="Anttoinette" WHERE first_name = "Andy";
+
+UPDATE users SET first_name="Jiho" WHERE ID="2" AND ID="3";
+
+\C
+
+DELETE users WHERE lastName ="Smith";
+
+SELECT * FROM users ORDER BY birthday_day;
+
+
+// TO WORK SAFETLY
+START TRANSACTION;
+ROLLBACK;
+COMMIT; 
+
+
